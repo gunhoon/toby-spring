@@ -38,10 +38,10 @@ public class HellobootApplication {
 	}
 
 	public static void main(String[] args) {
-		run();
+		run(HellobootApplication.class, args);
 	}
 
-	private static void run() {
+	private static void run(Class<?> applicationClass, String... args) {
 		AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
 			@Override
 			protected void onRefresh() {
@@ -57,7 +57,7 @@ public class HellobootApplication {
 				webServer.start();
 			}
 		};
-		applicationContext.register(HellobootApplication.class);
+		applicationContext.register(applicationClass);
 		applicationContext.refresh();
 	}
 
