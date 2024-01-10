@@ -38,6 +38,10 @@ public class HellobootApplication {
 	}
 
 	public static void main(String[] args) {
+		run();
+	}
+
+	private static void run() {
 		AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
 			@Override
 			protected void onRefresh() {
