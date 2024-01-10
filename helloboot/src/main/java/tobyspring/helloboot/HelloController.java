@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Objects;
 
-@Controller
 @RequestMapping("/hello")
-@MyComponent
+@Controller
 public class HelloController {
     private final HelloService helloService;
 
